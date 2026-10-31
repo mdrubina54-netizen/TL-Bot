@@ -1,3 +1,4 @@
+import os
 import secrets
 import sqlite3
 import threading
@@ -17,10 +18,10 @@ BOT_TOKEN = "8989192943:AAFunj7_-Okc213i30DemkBecfVaURdZgPw"
 ADMIN_PASSWORD = "rone5225"
 
 BOT_USERNAME = "CYBVERPANELBOT"          # change if BotFather shows another name
-BASE_URL = "http://78.154.103.12:16598"
+BASE_URL = "https://tl-bot.enzonic.dev"
 CHANNEL = "@CYBERVPANEL"
 CHANNEL_LINK = "https://t.me/CYBERVPANEL"
-PORT = 16598
+PORT = int(os.environ.get("PORT", "8080"))  # port the app listens on
 
 BASE = Path(__file__).parent
 UPLOAD_DIR = BASE / "uploads"
